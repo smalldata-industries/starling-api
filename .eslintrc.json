@@ -1,0 +1,22 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "no-await-in-loop": "off",
+    "no-continue": "off",
+    "array-callback-return": "off",
+    "consistent-return": "off",
+    "no-restricted-syntax": "off",
+    "no-return-await": "off",
+    "no-use-before-define": "off",
+    "prefer-promise-reject-errors": "off",
+    "prefer-template": "off",
+    "no-restricted-properties": "off",
+    "no-plusplus": "off",
+    "func-names": "off",
+    "no-unused-vars": "off",
+    "no-shadow": "off"
+  }
+}
