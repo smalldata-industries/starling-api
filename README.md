@@ -11,7 +11,11 @@
 - Create a `.env` file in the project root directory with the following variables
 
 ```bash
-apiAddr='/ip4/<ip address of filecoin node>/tcp/3453/http'
+LOTUS_URL=ws://<ip address of Filecoin node>/rpc/v0
+LOTUS_AUTH_TOKEN=<Lotus RPC API authorization token with admin permissions>
+COPY_NUMBER=3
+ENCRYPTION_KEY=<encryption key>
+PRICE=5000000000
 COPY_NUMBER=3
 PORT=XXXX
 LOGS_ERROR_BASE_PATH='./logs/'
@@ -23,7 +27,7 @@ READINESS_PERIOD='5'
 SHUTDOWN_TIMEOUT_SECONDS='15'
 ```
 
-_Note_: If the filecoin node is running on the same machine, leave the `apiAddr` empty. This will default it to use the localhost connection.
+Note: Leave `ENCRYPTION_KEY` empty if you want to opt out for encryption.
 
 - Execute the following to run the API and expose the routes
 
@@ -63,7 +67,7 @@ The routes will be exposed at: `http://localhost:3000`
 - `/api/monitor`
 - `/api/list`
 - `/api/verify`
-- `/api/jobStatus/jobID`
+- `/api/jobStatus/uuid`
 - `/api/get/uuid`
 
 ### Routes
@@ -103,7 +107,7 @@ GET http://localhost:3000/api/verify
 - Get the Job Status data of a single job
 
 ```bash
-GET http://localhost:3000/api/jobStatus/<jobID>
+GET http://localhost:3000/api/jobStatus/<uuid>
 ```
 
 - Get a single file

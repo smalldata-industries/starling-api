@@ -11,6 +11,7 @@ const listRoute = require('./lib/routes/list');
 const verifyRoute = require('./lib/routes/verify');
 const jobStatusRoute = require('./lib/routes/jobStatus');
 const getRoute = require('./lib/routes/get');
+const getCopyRoute = require('./lib/routes/get-copy');
 const errorHandler = require('./lib/errors/error-handler');
 const ErrStrategies = require('./lib/errors/strategies');
 const logger = require('./lib/utils/logger').Logger;
@@ -29,6 +30,8 @@ async function startApp() {
   app.use('/api/verify', verifyRoute(authenticatedRouter()));
   app.use('/api/jobStatus', jobStatusRoute(authenticatedRouter()));
   app.use('/api/get', getRoute(authenticatedRouter()));
+  app.use('/api/getCopy', getCopyRoute(authenticatedRouter()));
+
 
   appErrorHandler(app);
   return app;

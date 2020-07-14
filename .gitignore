@@ -66,3 +66,5 @@ typings/
 
 # CodeCov file
 *.lcov
+
+.idea
