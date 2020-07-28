@@ -26,8 +26,10 @@ READINESS_FAILURE_THRESHOLD='2'
 READINESS_PERIOD='5'
 SHUTDOWN_TIMEOUT_SECONDS='15'
 ```
+One way to find Lotus IP, port number and auth token is `lotus auth api-info --perm admin` command.
 
-Note: Leave `ENCRYPTION_KEY` empty if you want to opt out for encryption.
+Note: 
+    - Leave `ENCRYPTION_KEY` empty if you want to opt out for encryption.
 
 - Execute the following to run the API and expose the routes
 
