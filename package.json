@@ -28,7 +28,7 @@
     "filecoin-api-client": "^0.5.2",
     "fs-extra": "^8.1.0",
     "joi": "^14.3.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mkdirp": "^1.0.3",
     "rpc-websockets": "^5.2.2",
     "shortid": "^2.2.15",
